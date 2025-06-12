@@ -9,6 +9,7 @@
     "btw:build": "yarn build"
   },
   "dependencies": {
+    "@biocad-test/ui": "workspace:*",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
     "@vitejs/plugin-react": "^4.2.0",

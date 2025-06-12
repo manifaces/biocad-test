@@ -1,0 +1,8 @@
+.IconButton {
+  --cursor-button: pointer;
+  --cursor-disabled: default;
+
+  &[data-accent-color] {
+    transition: all 0.25s ease;
+  }
+}
