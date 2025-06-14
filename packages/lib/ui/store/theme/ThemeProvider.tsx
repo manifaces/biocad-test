@@ -30,7 +30,7 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
 
   return (
     <ThemeContext.Provider value={{ appearance, setAppearance: updateAppearance, toggleAppearance }}>
-      <Theme appearance={appearance} accentColor="blue" radius="medium">
+      <Theme appearance={appearance} accentColor="blue" grayColor="slate" radius="medium">
         {children}
       </Theme>
     </ThemeContext.Provider>

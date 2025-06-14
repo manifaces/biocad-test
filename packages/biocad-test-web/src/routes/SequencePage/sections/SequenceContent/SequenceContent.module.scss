@@ -1,0 +1,24 @@
+.SequenceContent {
+  display: grid;
+  gap: 24px;
+  padding: 100px 0;
+}
+
+.SequenceContent__title {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.SequenceContent__link {
+  color: var(--accent-a11);
+  transition: color 0.25s;
+
+  &:hover,
+  &:focus-visible {
+    color: var(--accent-a9);
+  }
+
+  &:active {
+    color: var(--accent-a6);
+  }
+}

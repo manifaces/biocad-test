@@ -1,0 +1,82 @@
+.AlignmentVisualizer {
+  font-size: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin-top: 8px;
+  position: relative;
+  user-select: none;
+}
+
+.AlignmentVisualizer__block {
+  --select-gap: calc(0.4 * var(--cell-size) - 2px);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  user-select: none;
+}
+
+.AlignmentVisualizer__row {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  user-select: text;
+}
+
+.AlignmentVisualizer__item {
+  display: inline-flex;
+  width: var(--cell-size, 30px);
+  height: var(--cell-size, 30px);
+  align-items: center;
+  justify-content: center;
+  font-family: monospace;
+  user-select: none;
+  white-space: pre;
+  pointer-events: none;
+}
+
+.AlignmentVisualizer__search {
+  position: absolute;
+  left: 0;
+  top: 0;
+  letter-spacing: var(--line-space);
+  font-family: monospace;
+  user-select: text;
+  color: transparent;
+  max-width: calc(var(--cell-size) * var(--rows-size));
+  width: 100%;
+  height: var(--cell-size, 30px);
+  display: flex;
+  align-items: center;
+  cursor: text;
+
+  span {
+    max-width: calc(var(--cell-size) * var(--rows-size) - (var(--select-gap) * 2));
+    line-height: 1.25;
+    overflow: hidden;
+    white-space: nowrap;
+
+    &::selection {
+      background-color: #ff0;
+      color: #000;
+    }
+  }
+
+  &::before {
+    content: '';
+    width: var(--select-gap);
+    height: var(--cell-size, 30px);
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    width: var(--select-gap);
+    height: var(--cell-size, 30px);
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
