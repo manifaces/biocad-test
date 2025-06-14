@@ -8,6 +8,8 @@
 
 Детальная информация по конкретным пакетам представлена в их собственных `README.md`.
 
+[ДЕМОНСТРАЦИЯ](https://manifaces.github.io/biocad-test/)
+
 ## Разработка
 
 Здесь используются (и уже настроены) современная версия [Yarn 2+](https://yarnpkg.com/getting-started/migration) и [Yarn Workspaces](https://yarnpkg.com/features/workspaces) –
