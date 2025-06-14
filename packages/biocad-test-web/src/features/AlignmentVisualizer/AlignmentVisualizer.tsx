@@ -6,10 +6,11 @@ import { splitSequence } from './utils';
 import { useChunkSize } from 'hooks/useChunkSize';
 import { useCopyOnSelection } from 'hooks/useCopyOnSelection';
 import { ToastContainer, useTheme, useToastQueue } from '@biocad-test/ui';
+import { useMediaQueryResult } from 'hooks/useMediaQueryResult';
 
 export const AlignmentVisualizer = () => {
   const charWidthPX = 40;
-
+  const isDesktop = useMediaQueryResult('(width >= 768px)');
   const { aligned } = useSequence();
   const { appearance } = useTheme();
   const { containerRef, node, chunkSize } = useChunkSize(charWidthPX);
@@ -43,8 +44,7 @@ export const AlignmentVisualizer = () => {
           style={
             {
               '--rows-size': chunk.length,
-              '--cell-size': `${charWidthPX}px`,
-              '--line-space': `${0.091 * charWidthPX - 1}ch`
+              '--cell-size': `${charWidthPX}px`
             } as CSSProperties
           }>
           <div className={s.AlignmentVisualizer__row}>
@@ -78,7 +78,9 @@ export const AlignmentVisualizer = () => {
         </div>
       ))}
       <div className={s.AlignmentVisualizer__info}>
-        Выделите часть последовательности, чтобы скопировать ее в буфер обмена
+        {isDesktop
+          ? 'Выделите часть последовательности, чтобы скопировать ее в буфер обмена'
+          : 'В десктопной версии доступно копирование последовательностей'}
       </div>
       <ToastContainer toasts={toasts} removeToast={removeToast} duration={2000} />
     </div>

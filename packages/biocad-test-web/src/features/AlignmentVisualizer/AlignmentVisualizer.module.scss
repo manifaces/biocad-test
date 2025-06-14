@@ -12,10 +12,16 @@
 
 .AlignmentVisualizer__block {
   --select-gap: calc(0.4 * var(--cell-size) - 2px);
+  --line-space: calc(var(--cell-size) - 12px);
   display: flex;
   flex-direction: column;
   gap: 12px;
   user-select: none;
+
+  @media (width >= 768px) {
+    --select-gap: calc(0.4 * var(--cell-size) - 2px);
+    --line-space: calc(var(--cell-size) - 11px);
+  }
 }
 
 .AlignmentVisualizer__row {
@@ -45,11 +51,11 @@
   font-family: monospace;
   user-select: text;
   color: transparent;
-  max-width: calc(var(--cell-size) * var(--rows-size));
   width: 100%;
   height: var(--cell-size, 30px);
   display: flex;
   align-items: center;
+  justify-content: center;
   cursor: text;
 
   span {
@@ -57,27 +63,16 @@
     line-height: 1.25;
     overflow: hidden;
     white-space: nowrap;
+    user-select: none;
+
+    @media (width >= 768px) {
+      user-select: text;
+    }
 
     &::selection {
       background-color: #ff0;
       color: #000;
     }
-  }
-
-  &::before {
-    content: '';
-    width: var(--select-gap);
-    height: var(--cell-size, 30px);
-  }
-
-  &::after {
-    content: '';
-    display: block;
-    width: var(--select-gap);
-    height: var(--cell-size, 30px);
-    position: absolute;
-    right: 0;
-    top: 0;
   }
 }
 

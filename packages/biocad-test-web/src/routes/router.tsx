@@ -1,8 +1,8 @@
-import { createBrowserRouter, createRoutesFromElements, replace, Route } from 'react-router-dom';
+import { createHashRouter, createRoutesFromElements, replace, Route } from 'react-router-dom';
 import { BaseLayout } from './_layouts/BaseLayout';
 import { SequencePage } from './SequencePage';
 
-export const router = createBrowserRouter(
+export const router = createHashRouter(
   createRoutesFromElements(
     <Route>
       <Route Component={BaseLayout}>

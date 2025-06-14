@@ -1,9 +1,11 @@
 {
   "name": "biocad-test-web",
   "type": "module",
+  "homepage": "https://manifaces.github.io/biocad-test",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "deploy": "gh-pages -d dist",
     "preview": "vite preview",
     "btw:dev": "yarn dev",
     "btw:build": "yarn build"
@@ -14,6 +16,7 @@
     "@types/react-dom": "^18.2.0",
     "@vitejs/plugin-react": "^4.2.0",
     "clsx": "^2.1.0",
+    "gh-pages": "^6.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet-async": "^2.0.5",
