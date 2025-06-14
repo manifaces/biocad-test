@@ -1,3 +1,5 @@
+@use '@biocad-test/ui/styles' as ds;
+
 .SequenceContent {
   display: grid;
   gap: 24px;
@@ -10,15 +12,15 @@
 }
 
 .SequenceContent__link {
-  color: var(--accent-a11);
+  color: ds.$color-link-default;
   transition: color 0.25s;
 
   &:hover,
   &:focus-visible {
-    color: var(--accent-a9);
+    color: ds.$color-link-hover;
   }
 
   &:active {
-    color: var(--accent-a6);
+    color: ds.$color-link-pressed;
   }
 }

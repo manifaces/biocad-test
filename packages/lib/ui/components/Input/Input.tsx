@@ -1,6 +1,7 @@
 import { TextField } from '@radix-ui/themes';
 import clsx from 'clsx';
 import { ChangeEventHandler } from 'react';
+import s from './Input.module.scss';
 
 export interface InputProps {
   type?:
@@ -38,7 +39,7 @@ export const Input = ({ type = 'text', value, name, placeholder, onChange, class
       value={value}
       name={name}
       onChange={handleChange}
-      className={clsx(className)}
+      className={clsx(s.Input, className)}
     />
   );
 };

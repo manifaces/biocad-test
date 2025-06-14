@@ -3,7 +3,7 @@
 .Toast {
   padding: 16px 24px;
   border-radius: 6px;
-  box-shadow: var(--shadow-3);
+  box-shadow: ds.$shadow-card-primary;
   background-color: ds.$color-background-primary;
 
   &[data-state='open'] {
