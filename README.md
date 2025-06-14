@@ -2,7 +2,8 @@
 
 Тестовое задание на позицию frontend разработчика в компанию [BIOCAD](https://biocad.ru/) в Департамент Вычислительной Биологии
 
-- [`biocad-test-web`](packages/biocad-test-web) (`btw:`) – инструмент для визуализации [выравнивания аминокислотных последовательностей](https://biomolecula.ru/articles/12-metodov-v-kartinkakh-sukhaia-biologiia) на React (Vite)
+- [`biocad-test-web`](packages/biocad-test-web) (`btw:`) – инструмент для визуализации [выравнивания аминокислотных последовательностей](https://biomolecula.ru/articles/12-metodov-v-kartinkakh-sukhaia-biologiia) на React (Vite).
+- [`@biocad-test/ui`](packages/lib/ui) (`ui`) – UI-библиотека компонентов и тем.
 - [`@biocad-test/eslint-plugin-import-paths`](packages/lib/eslint-plugin-import-paths) (`ip:`) – доработанный форк [одноименного плагина](https://www.npmjs.com/package/eslint-plugin-no-relative-import-paths) для ESLint, правильно исправляет импорты на абсолютные и относительные.
 
 Детальная информация по конкретным пакетам представлена в их собственных `README.md`.

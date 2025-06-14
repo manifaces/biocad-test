@@ -1,6 +1,6 @@
 import { SequenceForm } from 'features/SequenceForm';
 import s from './SequenceContent.module.scss';
-import { AlignmentVisualizer } from 'components/AlignmentVisualizer';
+import { AlignmentVisualizer } from 'features/AlignmentVisualizer';
 import { ThemeToggleButton } from '@biocad-test/ui';
 
 export const SequenceContent = () => {

@@ -35,6 +35,7 @@ export const AlignmentVisualizer = () => {
 
   return (
     <div className={s.AlignmentVisualizer} ref={containerRef}>
+      <h2 className={s.AlignmentVisualizer__title}>Визуализация</h2>
       {firstChunks.map((chunk, i) => (
         <div
           key={i}
@@ -76,6 +77,9 @@ export const AlignmentVisualizer = () => {
           </div>
         </div>
       ))}
+      <div className={s.AlignmentVisualizer__info}>
+        Выделите часть последовательности, чтобы скопировать ее в буфер обмена
+      </div>
       <ToastContainer toasts={toasts} removeToast={removeToast} duration={2000} />
     </div>
   );
